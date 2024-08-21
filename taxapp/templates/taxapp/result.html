@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Result</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'taxapp/styles.css' %}">
+</head>
+<body>
+    <div class="container tax-result">
+        <h2>Your Tax Liability is: ₹{{ tax }}</h2>
+        <a href="{% url 'tax_view' %}">Calculate Again</a>
+    </div>
+</body>
+</html>
